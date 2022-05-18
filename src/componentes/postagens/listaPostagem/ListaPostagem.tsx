@@ -3,7 +3,6 @@ import { Link,useNavigate } from 'react-router-dom';
 import {Box, Card, CardActions, CardContent, Button, Typography} from'@material-ui/core';
 import './ListaPostagem.css';
 import Postagem from '../../../models/Postagem'
-import useLocalStorage from 'react-use-localstorage';
 import { busca } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/TokensReducer';
@@ -49,10 +48,6 @@ useEffect(()=>{
 return(
     <>
    
-
-     {/* headers:{ */}
-        {/* Authorization:token */}
-    {/* } */}
   { listaPostagem.map(postagem =>(
  <Box m={2}>
      <Card variant='outlined'>
